@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TIKOn Kesäkalenteri 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="kalenteri.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>TIKOn Kesäkalenteri</h1>
+  </header>
+
+  <!-- CALENDAR -->
+  <div class="calendar-wrap">
+    <div class="week-label">Viikot 21–25 · Toukokuu &amp; Kesäkuu</div>
+    <div class="grid-row five" id="row1"></div>
+
+    <div class="week-label">Viikot 26–30 · Kesä &amp; Heinäkuu</div>
+    <div class="grid-row five" id="row2"></div>
+
+    <div class="week-label">Viikot 31–33 · Heinä &amp; Elokuu</div>
+    <div class="grid-row three" id="row3"></div>
+  </div>
+
+  <!-- INFO STRIP -->
+  <div class="info-strip">
+    <div class="info-block">
+      <h3>🗓️ TRATIn kesäloma 2026</h3>
+      <p>Tikolaisen kesäloma kestää 13 viikkoa: 18.5.–16.8.2026. Jokaiselle viikolle on oma luukkunsa – avaa se viikon alkaessa!</p>
+    </div>
+    <div class="info-block">
+      <h3>🎯 Kohderyhmä</h3>
+      <p>Kalenteri on tehty TRATIlaisille, mutta sopii koko perheelle. Vinkit kattavat konsertit, luontokohteet, liikuntahaasteet ja ilmaistapahtumat Helsingissä.</p>
+    </div>
+    <div class="info-block">
+      <h3>📍 Helsinki &amp; ympäristö</h3>
+      <p>Tapahtumapaikkana pääasiassa Helsinki ja lähiympäristö. Karttalinkit vievät suoraan Google Mapsiin – helppo navigoida perille.</p>
+    </div>
+    <div class="info-block">
+      <h3>👥 Tekijät</h3>
+      <p>Handmade by Team JKKK 2026. Suositukset tulevat tiimin jäseniltä – jokainen luukku kantaa suosittelijan nimen.</p>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="kalenteri.js"></script>
+
+</body>
+</html>

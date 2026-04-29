@@ -1,0 +1,283 @@
+:root {
+  --bg:        rgb(33, 35, 39);
+  --card:      rgb(66, 45, 129);
+  --accent:    rgb(157, 139, 229);
+  --header-bg: #3a8fd4;
+  --footer-bg: #5bbde4;
+  --text-dark: #111;
+  --text-light: #fff;
+
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #e8f4fb;
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--header-bg);
+  padding: 22px 30px 18px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 38px,
+    rgba(255,255,255,0.07) 38px,
+    rgba(255,255,255,0.07) 40px
+  );
+  pointer-events: none;
+}
+header h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 7vw, 3.6rem);
+  font-weight: 900;
+  color: var(--text-dark);
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 1;
+}
+.sun-emoji {
+  font-size: 2.2rem;
+  vertical-align: middle;
+  margin: 0 6px;
+}
+
+/* ── CALENDAR GRID ── */
+.calendar-wrap {
+  background: var(--bg);
+  padding: 28px 24px 32px;
+}
+.week-label {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-left: 4px;
+  opacity: 0.7;
+}
+.grid-row {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.grid-row.five  { grid-template-columns: repeat(5, 1fr); }
+.grid-row.three { grid-template-columns: repeat(3, 1fr); }
+
+/* ── DOOR ── */
+.door {
+  aspect-ratio: 3/4;
+  background: var(--card);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+  user-select: none;
+}
+.door:hover:not(.locked) {
+  transform: translateY(-4px) scale(1.03);
+
+}
+.door.locked {
+  cursor: not-allowed;
+  opacity: 0.55;
+  filter: grayscale(0.3);
+}
+.door.opened {
+  background: linear-gradient(135deg, #2e1f6b 0%, var(--card) 100%);
+
+}
+.door .week-num {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.door .door-label {
+  font-size: clamp(0.55rem, 1.1vw, 0.75rem);
+  color: rgba(255,255,255,0.55);
+  margin-top: 4px;
+  text-align: center;
+  padding: 0 6px;
+}
+.door .lock-icon {
+  font-size: 1.3rem;
+  margin-top: 6px;
+  opacity: 0.6;
+}
+.door.opened .lock-icon { display: none; }
+.door.opened .week-num  { color: #fff; }
+.door .open-star {
+  display: none;
+  position: absolute;
+  top: 8px; right: 10px;
+  font-size: 1rem;
+  color: gold;
+}
+.door.opened .open-star { display: block; }
+
+
+
+/* ── INFO STRIP ── */
+.info-strip {
+  background: var(--footer-bg);
+  padding: 36px 30px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 48px;
+}
+.info-block h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+.info-block p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #1a3a50;
+}
+
+/* ── MODAL ── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 8, 25, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+
+.modal-box {
+  background: var(--bg);
+  border: 2px solid var(--card);
+  border-radius: 20px;
+  max-width: 480px;
+  width: 92%;
+  padding: 36px 32px 32px;
+  position: relative;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 0 40px var(--open-glow);
+  animation: popIn 0.25s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+.modal-close {
+  position: absolute;
+  top: 14px; right: 18px;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 1.6rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+
+.modal-week-badge {
+  display: inline-block;
+  background: var(--card);
+  color: var(--accent);
+  font-family: 'Fraunces', serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 30px;
+  margin-bottom: 12px;
+}
+.modal-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.modal-emoji {
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: 10px;
+}
+.modal-desc {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+.modal-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--card);
+  color: var(--accent);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+}
+.modal-map-btn:hover {
+  background: #4a2fa0;
+  transform: translateY(-2px);
+}
+.modal-recommender {
+  margin-top: 16px;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.38);
+  font-style: italic;
+}
+.modal-locked-msg {
+  text-align: center;
+  padding: 20px 0;
+}
+.modal-locked-msg .lock-big {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 12px;
+}
+.modal-locked-msg p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .grid-row.five  { grid-template-columns: repeat(3, 1fr); }
+  .grid-row.three { grid-template-columns: repeat(3, 1fr); }
+  .info-strip     { grid-template-columns: 1fr; }
+  .calendar-wrap  { padding: 18px 12px 24px; }
+}
+@media (max-width: 380px) {
+  .grid-row.five { grid-template-columns: repeat(2, 1fr); }
+}
