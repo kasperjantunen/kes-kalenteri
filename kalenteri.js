@@ -142,7 +142,7 @@ function makeDoor(entry) {
   door.innerHTML = `
     <span class="open-star">★</span>
     <span class="week-num">${entry.num}</span>
-    <span class="door-label">${entry.emoji}<br>${entry.dates.split('–')[0]}</span>
+    <span class="door-label">${entry.emoji || ''}<br>${entry.dates.split('–')[0]}</span>
     <span class="lock-icon">${isLocked ? '🔒' : (isOpened ? '' : '🌞')}</span>
   `;
 
@@ -185,9 +185,16 @@ function openModal(entry, locked) {
       ${entry.img ? `<img src="${entry.img}" alt="${entry.title}" style="width:100%;border-radius:12px;margin-bottom:14px;object-fit:cover;max-height:200px;">` : ''}
       <div class="modal-title">${entry.title}</div>
       <div class="modal-desc">${entry.desc}</div>
-      <a class="modal-map-btn" href="${entry.map}" target="_blank" rel="noopener">
-        🗺️ ${entry.mapLabel}
-      </a>
+      <div class="modal-map-label">🗺️ ${entry.mapLabel}</div>
+      <iframe
+        src="${entry.map}"
+        width="100%"
+        height="200"
+        style="border:0;border-radius:12px;margin-top:8px;display:block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
       <div class="modal-recommender">${entry.recommender}</div>
     `;
     render();
