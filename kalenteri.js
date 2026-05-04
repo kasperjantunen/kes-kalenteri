@@ -74,7 +74,7 @@ const weeks = [
   },
   {
     num: 29, dates: "13.7.–19.7.2026",
-    img: "./Kuvat/CarParade.webp",
+    img: "./Kuvat/HietaniemenRanta.webp",
     title: "Rantapäivä Hietaniemessä",
     desc: "Välillä lomalla pitää myös loikoilla hyvässä seurassa, ja siihen sopii päivä esimerkiksi Hietaniemen uimarannalla! Hietsussa pääsee uimaan meressä ja makoilemaan auringossa, mutta myös aktiviteetteja kaipaaville löytyy tekemistä: rantalentopalloa, ulkokuntosalia, padelia ja muuta hauskaa.",
     map: "https://maps.google.com/maps?q=Hietaniemen+uimaranta+Helsinki&output=embed",
@@ -83,7 +83,7 @@ const weeks = [
   },
   {
     num: 30, dates: "20.7.–26.7.2026",
-    img: "./Kuvat/CarParade.webp",
+    img: "./Kuvat/SuuretOluet.webp",
     title: "Suuret oluet, pienet panimot",
     desc: "Janottaako? Suuret oluet, pienet panimot –festivaali kerää kotimaiset pienpanimot Helsingin keskustaan Rautatientorille 22.–25.7.Täällä pääset tutustumaan uusiin makumaailmoihin, tai nauttimaan tuttua suosikkioluttasi, muiden olutintoilijoiden keskuudessa.",
     map: "https://maps.google.com/maps?q=Rautatientori+Helsinki&output=embed",
@@ -92,7 +92,7 @@ const weeks = [
   },
   {
     num: 31, dates: "27.7.–2.8.2026",
-    img: "./Kuvat/CarParade.webp",
+    img: "./Kuvat/Weeknd.webp",
     title: "Weekend-festivaali",
     desc: "Weekend –festivaali on elektronisen musiikin ystävien kesän kohokohta! Tänä vuonna Weekend järjestetään pe-la 31.7.–1.8. Espoon Vermossa, ja esiintyjälistalta löytyy esimerkiksi Martin Garrix.",
     map: "https://maps.google.com/maps?q=Vermon+tapahtumapuisto+Helsinki&output=embed",
@@ -101,7 +101,7 @@ const weeks = [
   },
   {
     num: 32, dates: "3.8.–9.8.2026",
-    img: "./Kuvat/CarParade.webp",
+    img: "./Kuvat/Haltiala.webp",
     title: "Haltialan kotieläintarha",
     desc: "Haltialan kotieläintarha on täydellinen kesäretkikohde etenkin lapsiperheille. Tilalla pääsee katsomaan lehmiä, lampaita ja muita kotieläimiä, ja nauttimaan maatilan kodikkaasta tunnelmasta. Tilan lähipelloille pääsee myös poimimaan herneitä ja kukkia.",
     map: "https://maps.google.com/maps?q=Haltialan+kotieläintarha+Helsinki&output=embed",
@@ -110,7 +110,7 @@ const weeks = [
   },
   {
     num: 33, dates: "10.8.–16.8.2026",
-    img: "./Kuvat/CarParade.webp",
+    img: "./Kuvat/Flow.webp",
     title: "Flow-festivaali",
     desc: "Flow-festivaali on yksi Helsingin kulttitapahtumista! Maailmankuulu musiikin ja taiteen festivaali kerää Suvilahteen vuosittain lähes 100 000 kävijää. Tänä vuonna festivaali järjestetään pe-su 14.–16.8. - täydellinen kesäloman huipennus!",
     map: "https://maps.google.com/maps?q=Suvilahti+Helsinki&output=embed",
