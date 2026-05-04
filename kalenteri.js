@@ -2,7 +2,7 @@
 const weeks = [
   {
     num: 21, dates: "18.5.–24.5.2026",
-    img: "Kuvat/CarParade.webp",
+    img: "Kuvat./CarParade.webp",
     title: "Classic Car Parade",
     desc: "Classic Car Parade kokoaa historiallisia ajoneuvoja Senaatintorille lauantaina 23.5. Tapahtumassa pääsee ihailemaan klassisia autoja kesäisen Helsingin ytimessä, kauniin Helsingin tuomiokirkon edustalla! Tapahtuma on maksuton ja sopii hyvin perheen pienimmillekin.",
     map: "https://maps.google.com/maps?q=Classic+Car+Parade+Helsinki&output=embed",
