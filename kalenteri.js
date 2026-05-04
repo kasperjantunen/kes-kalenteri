@@ -11,6 +11,7 @@ const weeks = [
   },
   {
     num: 22, dates: "25.5.–31.5.2026",
+    img: "./Kuvat/Suomenlinna.webp",
     title: "Suomenlinna",
     desc: "Suomenlinna on kesä-Helsingin must visit –kohde! Suomenlinnassa pääset kulkemaan historiallisten linnoitusten läpi tunneleita pitkin (muistakaa pakata taskulamput!), sekä nauttimaan merellisistä saaristomaisemista. Suomenlinnasta löytyy uimarantaa ja leikkipuistoa, mutta myös paljon museoita ja muuta tekemistä sisätiloissa, mikäli kesäsade yllättää.",
     map: "https://maps.google.com/maps?q=Suomenlinna+Helsinki&output=embed",
@@ -19,6 +20,7 @@ const weeks = [
   },
   {
     num: 23, dates: "1.6.–7.6.2026",
+    img: "./Kuvat/BjornBorgMarathon.webp",
     title: "Björn Borg Helsinki Half Marathon",
     desc: "Juoksusta innostuneiden mahdollisuus pistää oma kunto koetukselle! Helsinki Half Marathon järjestetään lauantaina 6.6. ja se kulkee Helsingin keskustaa ja sen rantaviivaa pitkin, joten juoksun aikana pääsee nauttimaan kesä-Helsingin maisemista parhaimmillaan. Juoksutapahtuman huumaan voi tietysti osallistua myös juoksijoita sivusta kannustaen.",
     map: "https://maps.google.com/maps?q=Helsinki+Half+Marathon&output=embed",
@@ -27,6 +29,7 @@ const weeks = [
   },
   {
     num: 24, dates: "8.6.–14.6.2026",
+    img: "./Kuvat/HelsinkiPäivä.webp",
     title: "Helsinki-päivä",
     desc: "Helsingin syntymäpäivää juhlitaan perjantaina 12.6. Silloin kaupunki täyttyy erilaisista kulttuuritapahtumista, ja monet kaupungin palvelutahot järjestävät opastuskierroksia ja avoimia ovia.",
     map: "https://maps.google.com/maps?q=Espan+lava+Helsinki&output=embed",
@@ -35,6 +38,7 @@ const weeks = [
   },
   {
     num: 25, dates: "15.6.–21.6.2026",
+    img: "./Kuvat/Juhannus.webp",
     title: "Juhannuskokkojuhlat Seurasaaressa",
     desc: "Juhannus on keskikesän juhla, johon kuuluu yötön yö, hyvä ruoka ja juhannuskokko! Helsingissä kokkoja pääsee ihailemaan mm. Seurasaaren idyllisissä ja perinteikkäissä maisemissa juhannusaattona perjantaina 19.6.",
     map: "https://maps.google.com/maps?q=Seurasaari+Helsinki&output=embed",
@@ -43,6 +47,7 @@ const weeks = [
   },
   {
     num: 26, dates: "22.6.–28.6.2026",
+    img: "./Kuvat/HelsinkiPride.webp",
     title: "Pride-viikko",
     desc: "Pride-viikkoa vietetään 22.–28.6., ja silloin Helsingin valtaavat sateenkaaren värit! Viikko huipentuu lauantaina 27.6. järjestettävään Pride-kulkueeseen. Kulkueeseen on kuka tahansa tervetullut osallistumaan juuri omana itsenään. Nappaa mukaan sateenkaarilippu ja lähde kiertämään Helsingin keskustaa tärkeän sanoman puolesta!",
     map: "https://maps.google.com/maps?q=Senaatintori+Helsinki&output=embed",
@@ -51,6 +56,7 @@ const weeks = [
   },
   {
     num: 27, dates: "29.6.–5.7.2026",
+    img: "./Kuvat/Korkeasaari.webp",
     title: "Korkeasaari",
     desc: "Korkeasaari on täydellinen kesäretkikohde koko perheelle! Saareen pääsee kätevästi julkisella liikenteellä, esimerkiksi raitiovaunulla. Korkeasaaressa kierrellessä pääsee tutustumaan monenlaisiin eläimiin, ja nälän yllättäessä saaren monet ravintolat ja kahvilat palvelevat.",
     map: "https://maps.google.com/maps?q=Korkeasaari+Helsinki&output=embed",
@@ -59,6 +65,7 @@ const weeks = [
   },
   {
     num: 28, dates: "6.7.–12.7.2026",
+    img: "./Kuvat/HelsinkiCup.webp",
     title: "HesaCup",
     desc: "HesaCup kokoaa Helsinkiin vuosittain tuhansia junioreiden jalkapallojoukkueita ympäri maailmalta. Tänä vuonna HesaCup järjestetään 6.–11.7. Otteluita pelataan ympäri Helsinkiä, ja niihin on maksuton pääsy.",
     map: "https://maps.google.com/maps?q=Käpylän+liikuntapuisto+Helsinki&output=embed",
@@ -67,6 +74,7 @@ const weeks = [
   },
   {
     num: 29, dates: "13.7.–19.7.2026",
+    img: "./Kuvat/CarParade.webp",
     title: "Rantapäivä Hietaniemessä",
     desc: "Välillä lomalla pitää myös loikoilla hyvässä seurassa, ja siihen sopii päivä esimerkiksi Hietaniemen uimarannalla! Hietsussa pääsee uimaan meressä ja makoilemaan auringossa, mutta myös aktiviteetteja kaipaaville löytyy tekemistä: rantalentopalloa, ulkokuntosalia, padelia ja muuta hauskaa.",
     map: "https://maps.google.com/maps?q=Hietaniemen+uimaranta+Helsinki&output=embed",
@@ -75,6 +83,7 @@ const weeks = [
   },
   {
     num: 30, dates: "20.7.–26.7.2026",
+    img: "./Kuvat/CarParade.webp",
     title: "Suuret oluet, pienet panimot",
     desc: "Janottaako? Suuret oluet, pienet panimot –festivaali kerää kotimaiset pienpanimot Helsingin keskustaan Rautatientorille 22.–25.7.Täällä pääset tutustumaan uusiin makumaailmoihin, tai nauttimaan tuttua suosikkioluttasi, muiden olutintoilijoiden keskuudessa.",
     map: "https://maps.google.com/maps?q=Rautatientori+Helsinki&output=embed",
@@ -83,6 +92,7 @@ const weeks = [
   },
   {
     num: 31, dates: "27.7.–2.8.2026",
+    img: "./Kuvat/CarParade.webp",
     title: "Weekend-festivaali",
     desc: "Weekend –festivaali on elektronisen musiikin ystävien kesän kohokohta! Tänä vuonna Weekend järjestetään pe-la 31.7.–1.8. Espoon Vermossa, ja esiintyjälistalta löytyy esimerkiksi Martin Garrix.",
     map: "https://maps.google.com/maps?q=Vermon+tapahtumapuisto+Helsinki&output=embed",
@@ -91,6 +101,7 @@ const weeks = [
   },
   {
     num: 32, dates: "3.8.–9.8.2026",
+    img: "./Kuvat/CarParade.webp",
     title: "Haltialan kotieläintarha",
     desc: "Haltialan kotieläintarha on täydellinen kesäretkikohde etenkin lapsiperheille. Tilalla pääsee katsomaan lehmiä, lampaita ja muita kotieläimiä, ja nauttimaan maatilan kodikkaasta tunnelmasta. Tilan lähipelloille pääsee myös poimimaan herneitä ja kukkia.",
     map: "https://maps.google.com/maps?q=Haltialan+kotieläintarha+Helsinki&output=embed",
@@ -99,6 +110,7 @@ const weeks = [
   },
   {
     num: 33, dates: "10.8.–16.8.2026",
+    img: "./Kuvat/CarParade.webp",
     title: "Flow-festivaali",
     desc: "Flow-festivaali on yksi Helsingin kulttitapahtumista! Maailmankuulu musiikin ja taiteen festivaali kerää Suvilahteen vuosittain lähes 100 000 kävijää. Tänä vuonna festivaali järjestetään pe-su 14.–16.8. - täydellinen kesäloman huipennus!",
     map: "https://maps.google.com/maps?q=Suvilahti+Helsinki&output=embed",
