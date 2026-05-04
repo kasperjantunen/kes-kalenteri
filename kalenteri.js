@@ -132,10 +132,10 @@ const viikot = [
   }
 ];
 
-// Nykyinen viikkonumero – vaihda tätä kun kalenteri etenee
+// Nykyinen viikkonumero, vaihda tätä kun kalenteri etenee const currentWeek = getISOWeek(new Date());
 const nykyinenViikko = 35;
 
-// Tehdään yksi luukku-kortti
+// Tehdään yksi luukkukortti
 function luoLuukku(viikko) {
   const onLukittu = viikko.numero > nykyinenViikko;
   const onAvattu = !onLukittu && localStorage.getItem("luukku_" + viikko.numero) === "auki";
