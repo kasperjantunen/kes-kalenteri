@@ -170,6 +170,7 @@ function openModal(entry, locked) {
     localStorage.setItem('door_' + entry.num, 'open');
     content.innerHTML = `
       <div class="modal-week-badge">Viikko ${entry.num} · ${entry.dates}</div>
+      ${entry.img ? `<img src="${entry.img}" alt="${entry.title}" style="width:100%;border-radius:12px;margin-bottom:14px;object-fit:cover;max-height:200px;">` : ''}
       <div class="modal-title">${entry.title}</div>
       <div class="modal-desc">${entry.desc}</div>
       <a class="modal-map-btn" href="${entry.map}" target="_blank" rel="noopener">
