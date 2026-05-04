@@ -29,7 +29,7 @@ const weeks = [
   },
   {
     num: 24, dates: "8.6.–14.6.2026",
-    img: "./Kuvat/HelsinkiPäivä.webp",
+    img: "./Kuvat/HelsinkiPaiva.webp",
     title: "Helsinki-päivä",
     desc: "Helsingin syntymäpäivää juhlitaan perjantaina 12.6. Silloin kaupunki täyttyy erilaisista kulttuuritapahtumista, ja monet kaupungin palvelutahot järjestävät opastuskierroksia ja avoimia ovia.",
     map: "https://maps.google.com/maps?q=Espan+lava+Helsinki&output=embed",
