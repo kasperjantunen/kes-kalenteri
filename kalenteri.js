@@ -92,7 +92,7 @@ const weeks = [
   },
   {
     num: 31, dates: "27.7.–2.8.2026",
-    img: "./Kuvat/Weeknd.webp",
+    img: "./Kuvat/Weekend.webp",
     title: "Weekend-festivaali",
     desc: "Weekend –festivaali on elektronisen musiikin ystävien kesän kohokohta! Tänä vuonna Weekend järjestetään pe-la 31.7.–1.8. Espoon Vermossa, ja esiintyjälistalta löytyy esimerkiksi Martin Garrix.",
     map: "https://maps.google.com/maps?q=Vermon+tapahtumapuisto+Helsinki&output=embed",
