@@ -132,8 +132,8 @@ const viikot = [
   }
 ];
 
-// Nykyinen viikkonumero, vaihda tätä kun kalenteri etenee const currentWeek = getISOWeek(new Date());
-const nykyinenViikko = 35;
+// Nykyinen viikkonumero, vaihda tätä kun kalenteri etenee const currentWeek = getISOWeek(new Date()); const nykyinenViikko = 35;
+const currentWeek = getISOWeek(new Date());
 
 // Tehdään yksi luukkukortti
 function luoLuukku(viikko) {
