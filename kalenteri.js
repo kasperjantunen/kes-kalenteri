@@ -1,3 +1,6 @@
+<script src="https://cdn.jsdelivr.net/npm/date-fns@3/cdn.min.js"></script>
+
+
 // Kesäviikkojen tiedot
 const viikot = [
   {
