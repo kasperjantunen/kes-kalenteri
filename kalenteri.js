@@ -147,10 +147,9 @@ function luoLuukku(viikko) {
   luukku.className = "door" + (onLukittu ? " locked" : "") + (onAvattu ? " opened" : "");
 
   const alkupaiva = viikko.paivamaarat.split("–")[0];
-  const kuvake = onLukittu ? "🔒" : (onAvattu ? "" : "🌞");
+  const kuvake = onLukittu ? "🔒" : (onAvattu ? "" : "");
 
   luukku.innerHTML =
-    '<span class="open-star">★</span>' +
     '<span class="week-num">' + viikko.numero + "</span>" +
     '<span class="door-label">' + alkupaiva + "</span>" +
     '<span class="lock-icon">' + kuvake + "</span>";
