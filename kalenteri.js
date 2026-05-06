@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/date-fns@3/cdn.min.js"></script>
+
 
 
 // Kesäviikkojen tiedot
@@ -136,7 +136,7 @@ const viikot = [
 ];
 
 // Nykyinen viikkonumero, vaihda tätä kun kalenteri etenee const currentWeek = getISOWeek(new Date()); const nykyinenViikko = 35;
-const nykyinenViikko = getISOWeek(new Date());
+const nykyinenViikko = 35;
 
 // Tehdään yksi luukkukortti
 function luoLuukku(viikko) {
